@@ -1,0 +1,14 @@
+material SilladeskTexture
+{
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        // Relative to the location of the material script
+        texture ../textures/silladesk_texture_map.png
+      }
+    }
+  }
+}

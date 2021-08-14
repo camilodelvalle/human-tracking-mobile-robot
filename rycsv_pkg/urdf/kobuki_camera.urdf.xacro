@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<robot name="kobuki_camera" xmlns:xacro="http://ros.org/wiki/xacro">
+
+    <!-- Materials -->
+    <material name="Black_Camera">
+        <color rgba="1 1 1 1.0"/>
+    </material>
+
+    <!-- Include Base Kobuki Model -->
+    <xacro:include filename="$(find kobuki_description)/urdf/kobuki_standalone.urdf.xacro" />
+
+    <joint name="camera_joint" type="fixed">
+        <origin xyz="0.13 0.0 0.095" rpy="0 -${5*M_PI/180.0} 0"/>
+        <parent link="base_link"/>
+        <child link="camera_rgb_frame"/>
+    </joint>
+    
+    <link name="camera_rgb_frame">
+        <visual>
+            <origin xyz="0.0 0.0 0.0" rpy="0 0 ${90*M_PI/180.0}"/>
+            <geometry>
+                <mesh filename="package://rycsv_pkg/models/camera/zed_camera.dae"/>
+            </geometry>
+            <material name="Black_Camera"/>
+        </visual>
+    </link>
+    
+    <!-- Include Camera Gazebo File -->
+    <xacro:include filename="$(find rycsv_pkg)/urdf/kobuki_camera.gazebo.xacro" />
+
+</robot>

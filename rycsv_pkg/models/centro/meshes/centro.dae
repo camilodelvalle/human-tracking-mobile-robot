@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <asset>
+    <contributor>
+      <author>Blender User</author>
+      <authoring_tool>Blender 2.91.0 commit date:2020-11-25, commit time:08:34, hash:0f45cab862b8</authoring_tool>
+    </contributor>
+    <created>2020-12-16T00:07:47</created>
+    <modified>2020-12-16T00:07:47</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="Material_002-effect">
+      <profile_COMMON>
+        <newparam sid="Material_002_Base_Color-surface">
+          <surface type="2D">
+            <init_from>Material_002_Base_Color</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="Material_002_Base_Color-sampler">
+          <sampler2D>
+            <source>Material_002_Base_Color-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <texture texture="Material_002_Base_Color-sampler" texcoord="UVMap"/>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_images>
+    <image id="Material_002_Base_Color" name="Material_002_Base_Color">
+      <init_from>Material.002%20Base%20Color.png</init_from>
+    </image>
+  </library_images>
+  <library_materials>
+    <material id="Material_002-material" name="Material.002">
+      <instance_effect url="#Material_002-effect"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="Orta_Sehpas1_Modern-mesh" name="Orta Sehpas1 Modern">
+      <mesh>
+        <source id="Orta_Sehpas1_Modern-mesh-positions">
+          <float_array id="Orta_Sehpas1_Modern-mesh-positions-array" count="96">-50 -50 19.75 50 -50 20.25 -50 -50 20.25 50 -50 19.75 50 50 20.25 50 50 19.75 -50 50 20.25 -50 50 19.75 -20 -20 -22.5 20 -20 22.5 -20 -20 22.5 20 -20 -22.5 20 20 22.5 20 20 -22.5 -20 20 22.5 -20 20 -22.5 -50 -50 -17.48189 50 -50 -12.48189 -50 -50 -12.48189 50 -50 -17.48189 50 50 -12.48189 50 50 -17.48189 -50 50 -12.48189 -50 50 -17.48189 -45 -45 -22.62087 45 -45 -17.62087 -45 -45 -17.62087 45 -45 -22.62087 45 45 -17.62087 45 45 -22.62087 -45 45 -17.62087 -45 45 -22.62087</float_array>
+          <technique_common>
+            <accessor source="#Orta_Sehpas1_Modern-mesh-positions-array" count="32" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Orta_Sehpas1_Modern-mesh-normals">
+          <float_array id="Orta_Sehpas1_Modern-mesh-normals-array" count="18">0 -1 0 1 0 0 0 1 0 -1 0 0 0 0 1 0 0 -1</float_array>
+          <technique_common>
+            <accessor source="#Orta_Sehpas1_Modern-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Orta_Sehpas1_Modern-mesh-map-0">
+          <float_array id="Orta_Sehpas1_Modern-mesh-map-0-array" count="288">0.6549013 0.8855851 0.3106763 0.883864 0.6549013 0.883864 0.6549013 0.8855851 0.3106763 0.8855851 0.3106763 0.883864 0.6549013 0.8832814 0.3106763 0.8815603 0.6549013 0.8815603 0.6549013 0.8832814 0.3106763 0.8832814 0.3106763 0.8815603 0.3106763 0.8832814 0.6549013 0.8815603 0.3106763 0.8815603 0.3106763 0.8832814 0.6549013 0.8832814 0.6549013 0.8815603 0.3106763 0.8855851 0.6549013 0.883864 0.3106763 0.883864 0.3106763 0.8855851 0.6549013 0.8855851 0.6549013 0.883864 0.6893237 0.3445163 0.3450988 2.91264e-4 0.6893238 2.9129e-4 0.6893237 0.3445163 0.3450988 0.3445162 0.3450988 2.91264e-4 0.3445163 0.3450988 2.91264e-4 0.6893237 0.3445162 0.6893238 0.3445163 0.3450988 2.9129e-4 0.3450988 2.91264e-4 0.6893237 0.8275963 0.6210613 0.6899064 0.4661601 0.8275963 0.4661601 0.8275963 0.6210613 0.6899063 0.6210613 0.6899064 0.4661601 0.8275963 0.4655775 0.6899064 0.3106763 0.8275963 0.3106763 0.8275963 0.4655775 0.6899063 0.4655775 0.6899064 0.3106763 0.6899063 0.4655775 0.8275963 0.3106763 0.6899064 0.3106763 0.6899063 0.4655775 0.8275963 0.4655775 0.8275963 0.3106763 0.6899063 0.6210613 0.8275963 0.4661601 0.6899064 0.4661601 0.6899063 0.6210613 0.8275963 0.6210613 0.8275963 0.4661601 0.4483662 0.8275963 0.3106763 0.6899063 0.4483662 0.6899064 0.4483662 0.8275963 0.3106763 0.8275963 0.3106763 0.6899063 0.5866389 0.6899064 0.4489488 0.8275963 0.5866388 0.8275963 0.5866389 0.6899064 0.4489489 0.6899063 0.4489488 0.8275963 0.6549013 0.8631839 0.3106763 0.8459727 0.6549013 0.8459727 0.6549013 0.8631839 0.3106763 0.8631839 0.3106763 0.8459727 0.6549013 0.8453902 0.3106763 0.8281788 0.6549013 0.8281789 0.6549013 0.8453902 0.3106763 0.8453901 0.3106763 0.8281788 0.3106763 0.8453901 0.6549013 0.8281789 0.3106763 0.8281788 0.3106763 0.8453901 0.6549013 0.8453902 0.6549013 0.8281789 0.3106763 0.8631839 0.6549013 0.8459727 0.3106763 0.8459727 0.3106763 0.8631839 0.6549013 0.8631839 0.6549013 0.8459727 0.3445162 0.3445163 2.9129e-4 2.91264e-4 0.3445163 2.9129e-4 0.3445162 0.3445163 2.91264e-4 0.3445162 2.9129e-4 2.91264e-4 0.6893238 0.3450988 0.3450988 0.6893237 0.6893237 0.6893238 0.6893238 0.3450988 0.3450988 0.3450988 0.3450988 0.6893237 0.8970239 0.7071176 0.5872213 0.6899063 0.8970239 0.6899064 0.8970239 0.7071176 0.5872213 0.7071176 0.5872213 0.6899063 0.6204788 0.8809778 0.3106763 0.8637664 0.6204788 0.8637665 0.6204788 0.8809778 0.3106763 0.8809777 0.3106763 0.8637664 0.3106763 0.8809777 0.6204788 0.8637665 0.3106763 0.8637664 0.3106763 0.8809777 0.6204788 0.8809778 0.6204788 0.8637665 0.5872213 0.7071176 0.8970239 0.6899064 0.5872213 0.6899063 0.5872213 0.7071176 0.8970239 0.7071176 0.8970239 0.6899064 0.3100938 0.9997088 2.9129e-4 0.6899063 0.3100938 0.6899064 0.3100938 0.9997088 2.91264e-4 0.9997088 2.9129e-4 0.6899063 0.9997088 2.9129e-4 0.6899063 0.3100938 0.9997088 0.3100938 0.9997088 2.9129e-4 0.6899064 2.91264e-4 0.6899063 0.3100938</float_array>
+          <technique_common>
+            <accessor source="#Orta_Sehpas1_Modern-mesh-map-0-array" count="144" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Orta_Sehpas1_Modern-mesh-vertices">
+          <input semantic="POSITION" source="#Orta_Sehpas1_Modern-mesh-positions"/>
+        </vertices>
+        <triangles material="Material_002-material" count="48">
+          <input semantic="VERTEX" source="#Orta_Sehpas1_Modern-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Orta_Sehpas1_Modern-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#Orta_Sehpas1_Modern-mesh-map-0" offset="2" set="0"/>
+          <p>0 0 0 1 0 1 2 0 2 0 0 3 3 0 4 1 0 5 3 1 6 4 1 7 1 1 8 3 1 9 5 1 10 4 1 11 5 2 12 6 2 13 4 2 14 5 2 15 7 2 16 6 2 17 7 3 18 2 3 19 6 3 20 7 3 21 0 3 22 2 3 23 2 4 24 4 4 25 6 4 26 2 4 27 1 4 28 4 4 29 7 5 30 3 5 31 0 5 32 7 5 33 5 5 34 3 5 35 8 0 36 9 0 37 10 0 38 8 0 39 11 0 40 9 0 41 11 1 42 12 1 43 9 1 44 11 1 45 13 1 46 12 1 47 13 2 48 14 2 49 12 2 50 13 2 51 15 2 52 14 2 53 15 3 54 10 3 55 14 3 56 15 3 57 8 3 58 10 3 59 10 4 60 12 4 61 14 4 62 10 4 63 9 4 64 12 4 65 15 5 66 11 5 67 8 5 68 15 5 69 13 5 70 11 5 71 16 0 72 17 0 73 18 0 74 16 0 75 19 0 76 17 0 77 19 1 78 20 1 79 17 1 80 19 1 81 21 1 82 20 1 83 21 2 84 22 2 85 20 2 86 21 2 87 23 2 88 22 2 89 23 3 90 18 3 91 22 3 92 23 3 93 16 3 94 18 3 95 18 4 96 20 4 97 22 4 98 18 4 99 17 4 100 20 4 101 23 5 102 19 5 103 16 5 104 23 5 105 21 5 106 19 5 107 24 0 108 25 0 109 26 0 110 24 0 111 27 0 112 25 0 113 27 1 114 28 1 115 25 1 116 27 1 117 29 1 118 28 1 119 29 2 120 30 2 121 28 2 122 29 2 123 31 2 124 30 2 125 31 3 126 26 3 127 30 3 128 31 3 129 24 3 130 26 3 131 26 4 132 28 4 133 30 4 134 26 4 135 25 4 136 28 4 137 31 5 138 27 5 139 24 5 140 31 5 141 29 5 142 27 5 143</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="Orta_Sehpas1_Modern" name="Orta Sehpas1 Modern" type="NODE">
+        <matrix sid="transform">0.01 0 0 0 0 0.01 0 0 0 0 0.01 0.2382217 0 0 0 1</matrix>
+        <instance_geometry url="#Orta_Sehpas1_Modern-mesh" name="Orta Sehpas1 Modern">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Material_002-material" target="#Material_002-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>

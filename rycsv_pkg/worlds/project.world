@@ -1,0 +1,1931 @@
+<sdf version='1.6'>
+  <world name='default'>
+    <light name='sun' type='directional'>
+      <cast_shadows>1</cast_shadows>
+      <pose frame=''>0 0 30 0 -0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <direction>-0.5 0.1 -0.9</direction>
+    </light>
+    <model name='ground_plane'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>20 10</size>
+            </plane>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>65535</collide_bitmask>
+              <ode/>
+            </contact>
+            <friction>
+              <ode>
+                <mu>100</mu>
+                <mu2>50</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>20 10</size>
+            </plane>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Wood</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    <model name='desk'>
+      <pose frame=''>0 0 0 0 -0 0</pose>
+      <static>1</static>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <scale>0.788149 0.788149 0.788149</scale>
+              <uri>model://desk/meshes/desk.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://desk/materials/textures</uri>
+              <uri>model://desk/materials/scripts</uri>
+              <name>DeskTexture</name>
+            </script>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <emissive>0 0 0 1</emissive>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    <model name='silladesk'>
+      <pose frame=''>0 0 0 0 -0 0</pose>
+      <static>1</static>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <scale>1.73835 1.73835 1.73835</scale>
+              <uri>model://silladesk/meshes/silladesk.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://silladesk/materials/textures</uri>
+              <uri>model://silladesk/materials/scripts</uri>
+              <name>SilladeskTexture</name>
+            </script>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <emissive>0 0 0 1</emissive>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    <model name='silla'>
+      <pose frame=''>0 0 0 0 -0 0</pose>
+      <static>1</static>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <scale>1.28836 1.28836 1.28836</scale>
+              <uri>model://silla/meshes/silla.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://silla/materials/textures</uri>
+              <uri>model://silla/materials/scripts</uri>
+              <name>SillaTexture</name>
+            </script>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <emissive>0 0 0 1</emissive>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    <model name='reciclaje'>
+      <pose frame=''>0 0 0 0 -0 0</pose>
+      <static>1</static>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <scale>1.2699 1.2699 1.2699</scale>
+              <uri>model://reciclaje/meshes/reciclaje.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://reciclaje/materials/textures</uri>
+              <uri>model://reciclaje/materials/scripts</uri>
+              <name>ReciclajeTexture</name>
+            </script>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <emissive>0 0 0 1</emissive>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    <model name='arbol'>
+      <pose frame=''>0 0 0 0 -0 0</pose>
+      <static>1</static>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <scale>0.221922 0.221922 0.221922</scale>
+              <uri>model://arbol/meshes/arbol.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://arbol/materials/textures</uri>
+              <uri>model://arbol/materials/scripts</uri>
+              <name>ArbolTexture</name>
+            </script>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <emissive>0 0 0 1</emissive>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    <model name='mesa'>
+      <pose frame=''>0 0 0 0 -0 0</pose>
+      <static>1</static>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <scale>1.51924 1.51924 1.51924</scale>
+              <uri>model://mesa/meshes/mesa.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://mesa/materials/textures</uri>
+              <uri>model://mesa/materials/scripts</uri>
+              <name>MesaTexture</name>
+            </script>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <emissive>0 0 0 1</emissive>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    <model name='centro'>
+      <pose frame=''>0 0 0 0 -0 0</pose>
+      <static>1</static>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <scale>1.15593 1.15593 1.15593</scale>
+              <uri>model://centro/meshes/centro.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://centro/materials/textures</uri>
+              <uri>model://centro/materials/scripts</uri>
+              <name>CentroTexture</name>
+            </script>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <emissive>0 0 0 1</emissive>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    <model name='rycsv_proyecto'>
+      <pose frame=''>4.885 3.765 0 0 -0 0</pose>
+      <link name='Wall_0'>
+        <pose frame=''>0 -4.925 0 0 -0 0</pose>
+        <visual name='Wall_0_Visual_0'>
+          <pose frame=''>-8.35877 0 1.25 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>3.28246 0.15 2.5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+            <ambient>0.12549 0.290196 0.529412 1</ambient>
+          </material>
+          <meta>
+            <layer>0</layer>
+          </meta>
+        </visual>
+        
+        <visual name='Wall_0_Visual_1'>
+          <pose frame=''>9.63399 0 1.25 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.732028 0.15 2.5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+            <ambient>0.12549 0.290196 0.529412 1</ambient>
+          </material>
+          <meta>
+            <layer>0</layer>
+          </meta>
+        </visual>
+        
+        <visual name='Wall_0_Visual_2'>
+          <pose frame=''>0.825216 0 0.25 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>15.0855 0.15 0.5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+            <ambient>0.12549 0.290196 0.529412 1</ambient>
+          </material>
+          <meta>
+            <layer>0</layer>
+          </meta>
+        </visual>
+   
+        <visual name='Wall_0_Visual_3'>
+          <pose frame=''>-3.23192 0 1.5 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>5.37125 0.15 2</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+            <ambient>0.12549 0.290196 0.529412 1</ambient>
+          </material>
+          <meta>
+            <layer>0</layer>
+          </meta>
+        </visual>
+       
+        <visual name='Wall_0_Visual_4'>
+          <pose frame=''>3.12553 0 1.5 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>5.74365 0.15 2</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+            <ambient>0.12549 0.290196 0.529412 1</ambient>
+          </material>
+          <meta>
+            <layer>0</layer>
+          </meta>
+        </visual>
+
+        <visual name='Wall_0_Visual_5'>
+          <pose frame=''>7.58266 0 1.5 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>1.57062 0.15 2</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+            <ambient>0.12549 0.290196 0.529412 1</ambient>
+          </material>
+          <meta>
+            <layer>0</layer>
+          </meta>
+        </visual>
+        
+        <visual name='Wall_0_Visual_6'>
+          <pose frame=''>-6.31754 0 1.9 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.8 0.15 1.2</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+            <ambient>0.12549 0.290196 0.529412 1</ambient>
+          </material>
+          <meta>
+            <layer>0</layer>
+          </meta>
+        </visual>
+  
+        <visual name='Wall_0_Visual_7'>
+          <pose frame=''>-0.146295 0 1.9 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.8 0.15 1.2</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+            <ambient>0.12549 0.290196 0.529412 1</ambient>
+          </material>
+          <meta>
+            <layer>0</layer>
+          </meta>
+        </visual>
+     
+        <visual name='Wall_0_Visual_8'>
+          <pose frame=''>6.39735 0 1.9 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.8 0.15 1.2</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+            <ambient>0.12549 0.290196 0.529412 1</ambient>
+          </material>
+          <meta>
+            <layer>0</layer>
+          </meta>
+        </visual>
+       
+        <visual name='Wall_0_Visual_9'>
+          <pose frame=''>8.81797 0 2.25 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.9 0.15 0.5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+            <ambient>0.12549 0.290196 0.529412 1</ambient>
+          </material>
+          <meta>
+            <layer>0</layer>
+          </meta>
+        </visual>
+        
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='Wall_1'>
+        <pose frame=''>9.925 0 0 0 -0 1.5708</pose>
+        <visual name='Wall_1_Visual_0'>
+          <pose frame=''>-3.29565 0 1.25 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>3.40869 0.15 2.5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+            <ambient>0.12549 0.290196 0.529412 1</ambient>
+          </material>
+          <meta>
+            <layer>0</layer>
+          </meta>
+        </visual>
+   
+        <visual name='Wall_1_Visual_1'>
+          <pose frame=''>1.70435 0 0.25 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>6.59131 0.15 0.5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+            <ambient>0.12549 0.290196 0.529412 1</ambient>
+          </material>
+          <meta>
+            <layer>0</layer>
+          </meta>
+        </visual>
+       
+        <visual name='Wall_1_Visual_2'>
+          <pose frame=''>0.324902 0 1.5 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>2.23242 0.15 2</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+            <ambient>0.12549 0.290196 0.529412 1</ambient>
+          </material>
+          <meta>
+            <layer>0</layer>
+          </meta>
+        </visual>
+  
+        <visual name='Wall_1_Visual_3'>
+          <pose frame=''>3.62056 0 1.5 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>2.75889 0.15 2</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+            <ambient>0.12549 0.290196 0.529412 1</ambient>
+          </material>
+          <meta>
+            <layer>0</layer>
+          </meta>
+        </visual>
+      
+        <visual name='Wall_1_Visual_4'>
+          <pose frame=''>-1.19131 0 1.9 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.8 0.15 1.2</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+            <ambient>0.12549 0.290196 0.529412 1</ambient>
+          </material>
+          <meta>
+            <layer>0</layer>
+          </meta>
+        </visual>
+     
+        <visual name='Wall_1_Visual_5'>
+          <pose frame=''>1.84111 0 1.9 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.8 0.15 1.2</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+            <ambient>0.12549 0.290196 0.529412 1</ambient>
+          </material>
+          <meta>
+            <layer>0</layer>
+          </meta>
+        </visual>
+    
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='Wall_2'>
+        <pose frame=''>0 4.925 0 0 -0 3.14159</pose>
+        <visual name='Wall_2_Visual_0'>
+          <pose frame=''>-8.43858 0 1.25 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>3.12284 0.15 2.5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+            <ambient>0.12549 0.290196 0.529412 1</ambient>
+          </material>
+          <meta>
+            <layer>0</layer>
+          </meta>
+        </visual>
+ 
+        <visual name='Wall_2_Visual_1'>
+          <pose frame=''>9.62068 0 1.25 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.758641 0.15 2.5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+            <ambient>0.12549 0.290196 0.529412 1</ambient>
+          </material>
+          <meta>
+            <layer>0</layer>
+          </meta>
+        </visual>
+      
+        <visual name='Wall_2_Visual_2'>
+          <pose frame=''>0.732102 0 0.25 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>15.2185 0.15 0.5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+            <ambient>0.12549 0.290196 0.529412 1</ambient>
+          </material>
+          <meta>
+            <layer>0</layer>
+          </meta>
+        </visual>
+ 
+        <visual name='Wall_2_Visual_3'>
+          <pose frame=''>-3.19203 0 1.5 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>5.77025 0.15 2</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+            <ambient>0.12549 0.290196 0.529412 1</ambient>
+          </material>
+          <meta>
+            <layer>0</layer>
+          </meta>
+        </visual>
+     
+        <visual name='Wall_2_Visual_4'>
+          <pose frame=''>3.16542 0 1.5 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>5.34465 0.15 2</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+            <ambient>0.12549 0.290196 0.529412 1</ambient>
+          </material>
+          <meta>
+            <layer>0</layer>
+          </meta>
+        </visual>
+
+        <visual name='Wall_2_Visual_5'>
+          <pose frame=''>7.48955 0 1.5 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>1.70362 0.15 2</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+            <ambient>0.12549 0.290196 0.529412 1</ambient>
+          </material>
+          <meta>
+            <layer>0</layer>
+          </meta>
+        </visual>
+       
+        <visual name='Wall_2_Visual_6'>
+          <pose frame=''>-6.47715 0 1.9 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.8 0.15 1.2</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+            <ambient>0.12549 0.290196 0.529412 1</ambient>
+          </material>
+          <meta>
+            <layer>0</layer>
+          </meta>
+        </visual>
+
+        <visual name='Wall_2_Visual_7'>
+          <pose frame=''>0.093094 0 1.9 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.8 0.15 1.2</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+            <ambient>0.12549 0.290196 0.529412 1</ambient>
+          </material>
+          <meta>
+            <layer>0</layer>
+          </meta>
+        </visual>
+
+        <visual name='Wall_2_Visual_8'>
+          <pose frame=''>6.23774 0 1.9 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.8 0.15 1.2</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+            <ambient>0.12549 0.290196 0.529412 1</ambient>
+          </material>
+          <meta>
+            <layer>0</layer>
+          </meta>
+        </visual>
+   
+        <visual name='Wall_2_Visual_9'>
+          <pose frame=''>8.79136 0 2.25 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.9 0.15 0.5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+            <ambient>0.12549 0.290196 0.529412 1</ambient>
+          </material>
+          <meta>
+            <layer>0</layer>
+          </meta>
+        </visual>
+     
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='Wall_3'>
+        <pose frame=''>-9.925 0 0 0 -0 -1.5708</pose>
+        <visual name='Wall_3_Visual_0'>
+          <pose frame=''>-3.74026 0 1.25 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>2.51948 0.15 2.5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+            <ambient>0.12549 0.290196 0.529412 1</ambient>
+          </material>
+          <meta>
+            <layer>0</layer>
+          </meta>
+        </visual>
+   
+        <visual name='Wall_3_Visual_1'>
+          <pose frame=''>1.25974 0 0.25 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>7.48052 0.15 0.5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+            <ambient>0.12549 0.290196 0.529412 1</ambient>
+          </material>
+          <meta>
+            <layer>0</layer>
+          </meta>
+        </visual>
+   
+        <visual name='Wall_3_Visual_2'>
+          <pose frame=''>-0.311602 0 1.5 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>2.73783 0.15 2</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+            <ambient>0.12549 0.290196 0.529412 1</ambient>
+          </material>
+          <meta>
+            <layer>0</layer>
+          </meta>
+        </visual>
+    
+        <visual name='Wall_3_Visual_3'>
+          <pose frame=''>3.42866 0 1.5 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>3.14269 0.15 2</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+            <ambient>0.12549 0.290196 0.529412 1</ambient>
+          </material>
+          <meta>
+            <layer>0</layer>
+          </meta>
+        </visual>
+      
+        <visual name='Wall_3_Visual_4'>
+          <pose frame=''>-2.08052 0 1.9 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.8 0.15 1.2</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+            <ambient>0.12549 0.290196 0.529412 1</ambient>
+          </material>
+          <meta>
+            <layer>0</layer>
+          </meta>
+        </visual>
+     
+        <visual name='Wall_3_Visual_5'>
+          <pose frame=''>1.45731 0 1.9 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.8 0.15 1.2</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+            <ambient>0.12549 0.290196 0.529412 1</ambient>
+          </material>
+          <meta>
+            <layer>0</layer>
+          </meta>
+        </visual>
+     
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <static>1</static>
+    </model>
+    <state world_name='default'>
+      <sim_time>1028 713000000</sim_time>
+      <real_time>280 116027331</real_time>
+      <wall_time>1608101865 376895101</wall_time>
+      <iterations>259681</iterations>
+      <model name='Construction Cone'>
+        <pose frame=''>9.51423 -4.45054 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>9.51423 -4.45054 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='arbol'>
+        <pose frame=''>8.22368 4.75667 -0.004271 0 -0 0</pose>
+        <scale>0.221922 0.221922 0.221922</scale>
+        <link name='link'>
+          <pose frame=''>8.22368 4.75667 -0.004271 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='cafe_table'>
+        <pose frame=''>0.281075 -4.17739 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>0.281075 -4.17739 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='cafe_table_0'>
+        <pose frame=''>-1.38018 4.0717 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-1.38018 4.0717 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='cafe_table_0_clone'>
+        <pose frame=''>-9.11571 -4.29144 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-9.11571 -4.29144 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='centro'>
+        <pose frame=''>-4.50735 0.435197 0 0 -0 0</pose>
+        <scale>1.15593 1.15593 1.15593</scale>
+        <link name='link'>
+          <pose frame=''>-4.50735 0.435197 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='centro_clone'>
+        <pose frame=''>-4.47528 2.96779 0 0 -0 0</pose>
+        <scale>1.17355 1.17355 1.17355</scale>
+        <link name='link'>
+          <pose frame=''>-4.47528 2.96779 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='desk'>
+        <pose frame=''>0.993359 -4.60158 0 0 -0 1.57785</pose>
+        <scale>0.788149 0.788149 0.788149</scale>
+        <link name='link'>
+          <pose frame=''>0.993359 -4.60158 0 0 -0 1.57785</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='desk_clone'>
+        <pose frame=''>1.05486 -2.15209 0 0 -0 1.57785</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>1.05486 -2.15209 0 0 -0 1.57785</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='desk_clone_0'>
+        <pose frame=''>6.95628 -2.68746 0 0 0 -1.56333</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>6.95628 -2.68746 0 0 0 -1.56333</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='desk_clone_1'>
+        <pose frame=''>6.98537 -0.120367 0 0 0 -1.56087</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>6.98537 -0.120367 0 0 0 -1.56087</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='desk_clone_2'>
+        <pose frame=''>3.84868 1.72973 0 0 -0 0.001087</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>3.84868 1.72973 0 0 -0 0.001087</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='ground_plane'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='mesa'>
+        <pose frame=''>-9.35089 4.36935 0 0 -0 0</pose>
+        <scale>1.51924 1.51924 1.51924</scale>
+        <link name='link'>
+          <pose frame=''>-9.35089 4.36935 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='rycsv_proyecto'>
+        <pose frame=''>-0.004936 0.00977 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='Wall_0'>
+          <pose frame=''>-0.004936 -4.91523 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='Wall_1'>
+          <pose frame=''>9.92006 0.009775 0 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='Wall_2'>
+          <pose frame=''>-0.004936 4.93478 0 0 -0 3.14159</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='Wall_3'>
+          <pose frame=''>-9.92994 0.009775 0 0 0 -1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='reciclaje'>
+        <pose frame=''>3.66144 -4.27861 0 0 -0 0</pose>
+        <scale>1.2699 1.2699 1.2699</scale>
+        <link name='link'>
+          <pose frame=''>3.66144 -4.27861 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='silla'>
+        <pose frame=''>4.57456 4.85511 0.438746 0 -0 0</pose>
+        <scale>1.28836 1.28836 1.28836</scale>
+        <link name='link'>
+          <pose frame=''>4.57456 4.85511 0.438746 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='silla_clone_0'>
+        <pose frame=''>9.87929 -1.08511 0.438746 0 0 -1.55993</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>9.87929 -1.08511 0.438746 0 0 -1.55993</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='silla_clone_1'>
+        <pose frame=''>-9.84938 1.8071 0.438746 0 -0 1.57064</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-9.84938 1.8071 0.438746 0 -0 1.57064</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='silla_clone_2'>
+        <pose frame=''>-4.52135 -4.84413 0.438746 0 -0 3.13824</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-4.52135 -4.84413 0.438746 0 -0 3.13824</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='silladesk'>
+        <pose frame=''>2.29763 -3.32831 0 0 0 -1.36963</pose>
+        <scale>1.73835 1.73835 1.73835</scale>
+        <link name='link'>
+          <pose frame=''>2.29763 -3.32831 0 0 0 -1.36963</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='silladesk_clone'>
+        <pose frame=''>2.34757 -0.860327 0 0 0 -1.36963</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>2.34757 -0.860327 0 0 0 -1.36963</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='silladesk_clone_0'>
+        <pose frame=''>5.11846 0.553714 0 0 0 -2.94272</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>5.11846 0.553714 0 0 0 -2.94272</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='silladesk_clone_1'>
+        <pose frame=''>5.66805 -1.37505 0 0 -0 1.74473</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>5.66805 -1.37505 0 0 -0 1.74473</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='silladesk_clone_1_clone'>
+        <pose frame=''>5.72004 -3.9568 0 0 -0 1.74473</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>5.72004 -3.9568 0 0 -0 1.74473</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='sofa_clone_2'>
+        <pose frame=''>-3.24963 -1.96759 0 0 0 -3.13964</pose>
+        <scale>1.47171 1.47171 1.47171</scale>
+        <link name='link'>
+          <pose frame=''>-3.24963 -1.96759 0 0 -0 -3.13964</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='sofa_clone_2_clone'>
+        <pose frame=''>-6.96137 -0.836862 0 0 -0 1.57227</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-6.96137 -0.836862 0 0 -0 1.57227</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='sofa_clone_2_clone_0'>
+        <pose frame=''>-2.01047 1.64623 0 0 0 -1.57114</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-2.01047 1.64623 0 0 0 -1.57114</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='sofa_clone_2_clone_0_clone'>
+        <pose frame=''>-2.00305 4.40989 0 0 0 -1.57114</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-2.00305 4.40989 0 0 0 -1.57114</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='sofa_clone_2_clone_clone'>
+        <pose frame=''>-6.97134 1.95488 0 0 -0 1.57227</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-6.97134 1.95488 0 0 -0 1.57227</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+    </state>
+    <model name='sofa_clone_2'>
+      <pose frame=''>-4.77931 -1.64121 0 0 -0 1.56307</pose>
+      <static>1</static>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <scale>1.47171 1.47171 1.47171</scale>
+              <uri>model://sofa/meshes/sofa.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://sofa/materials/textures</uri>
+              <uri>model://sofa/materials/scripts</uri>
+              <name>SofaTexture</name>
+            </script>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <emissive>0 0 0 1</emissive>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    <model name='sofa_clone_2_clone'>
+      <pose frame=''>-5.68447 0.352049 0 0 -0 -3.13964</pose>
+      <static>1</static>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <scale>1.47171 1.47171 1.47171</scale>
+              <uri>model://sofa/meshes/sofa.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://sofa/materials/textures</uri>
+              <uri>model://sofa/materials/scripts</uri>
+              <name>SofaTexture</name>
+            </script>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <emissive>0 0 0 1</emissive>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    <model name='sofa_clone_2_clone_0'>
+      <pose frame=''>0.158109 -0.542626 0 0 -0 -3.13964</pose>
+      <static>1</static>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <scale>1.47171 1.47171 1.47171</scale>
+              <uri>model://sofa/meshes/sofa.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://sofa/materials/textures</uri>
+              <uri>model://sofa/materials/scripts</uri>
+              <name>SofaTexture</name>
+            </script>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <emissive>0 0 0 1</emissive>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    <model name='sofa_clone_2_clone_clone'>
+      <pose frame=''>-6.97134 1.95488 0 0 -0 1.57227</pose>
+      <static>1</static>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <scale>1.47171 1.47171 1.47171</scale>
+              <uri>model://sofa/meshes/sofa.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://sofa/materials/textures</uri>
+              <uri>model://sofa/materials/scripts</uri>
+              <name>SofaTexture</name>
+            </script>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <emissive>0 0 0 1</emissive>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    <model name='sofa_clone_2_clone_0_clone'>
+      <pose frame=''>-2.00305 4.40989 0 0 0 -1.57114</pose>
+      <static>1</static>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <scale>1.47171 1.47171 1.47171</scale>
+              <uri>model://sofa/meshes/sofa.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://sofa/materials/textures</uri>
+              <uri>model://sofa/materials/scripts</uri>
+              <name>SofaTexture</name>
+            </script>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <emissive>0 0 0 1</emissive>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    <model name='centro_clone'>
+      <pose frame=''>-4.47528 2.96779 0 0 -0 0</pose>
+      <static>1</static>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <scale>1.17355 1.17355 1.17355</scale>
+              <uri>model://centro/meshes/centro.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://centro/materials/textures</uri>
+              <uri>model://centro/materials/scripts</uri>
+              <name>CentroTexture</name>
+            </script>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <emissive>0 0 0 1</emissive>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    <model name='desk_clone'>
+      <pose frame=''>1.02678 -1.66587 0 0 -0 1.57785</pose>
+      <static>1</static>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <scale>0.788149 0.788149 0.788149</scale>
+              <uri>model://desk/meshes/desk.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://desk/materials/textures</uri>
+              <uri>model://desk/materials/scripts</uri>
+              <name>DeskTexture</name>
+            </script>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <emissive>0 0 0 1</emissive>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    <model name='desk_clone_0'>
+      <pose frame=''>4.91494 -1.34225 0 0 -0 1.57785</pose>
+      <static>1</static>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <scale>0.788149 0.788149 0.788149</scale>
+              <uri>model://desk/meshes/desk.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://desk/materials/textures</uri>
+              <uri>model://desk/materials/scripts</uri>
+              <name>DeskTexture</name>
+            </script>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <emissive>0 0 0 1</emissive>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    <model name='desk_clone_1'>
+      <pose frame=''>4.89297 -4.37955 0 0 -0 1.57785</pose>
+      <static>1</static>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <scale>0.788149 0.788149 0.788149</scale>
+              <uri>model://desk/meshes/desk.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://desk/materials/textures</uri>
+              <uri>model://desk/materials/scripts</uri>
+              <name>DeskTexture</name>
+            </script>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <emissive>0 0 0 1</emissive>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    <model name='desk_clone_2'>
+      <pose frame=''>3.71084 1.45412 0 0 -0 1.57785</pose>
+      <static>1</static>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <scale>0.788149 0.788149 0.788149</scale>
+              <uri>model://desk/meshes/desk.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://desk/materials/textures</uri>
+              <uri>model://desk/materials/scripts</uri>
+              <name>DeskTexture</name>
+            </script>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <emissive>0 0 0 1</emissive>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    <model name='silladesk_clone'>
+      <pose frame=''>2.34757 -0.860327 0 0 0 -1.36963</pose>
+      <static>1</static>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <scale>1.73835 1.73835 1.73835</scale>
+              <uri>model://silladesk/meshes/silladesk.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://silladesk/materials/textures</uri>
+              <uri>model://silladesk/materials/scripts</uri>
+              <name>SilladeskTexture</name>
+            </script>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <emissive>0 0 0 1</emissive>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    <model name='silladesk_clone_0'>
+      <pose frame=''>4.6868 1.14951 0 0 0 -1.36963</pose>
+      <static>1</static>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <scale>1.73835 1.73835 1.73835</scale>
+              <uri>model://silladesk/meshes/silladesk.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://silladesk/materials/textures</uri>
+              <uri>model://silladesk/materials/scripts</uri>
+              <name>SilladeskTexture</name>
+            </script>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <emissive>0 0 0 1</emissive>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    <model name='silladesk_clone_1'>
+      <pose frame=''>4.60077 -0.058935 0 0 0 -1.36963</pose>
+      <static>1</static>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <scale>1.73835 1.73835 1.73835</scale>
+              <uri>model://silladesk/meshes/silladesk.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://silladesk/materials/textures</uri>
+              <uri>model://silladesk/materials/scripts</uri>
+              <name>SilladeskTexture</name>
+            </script>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <emissive>0 0 0 1</emissive>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    <model name='silladesk_clone_1_clone'>
+      <pose frame=''>5.72004 -3.9568 0 0 -0 1.74473</pose>
+      <static>1</static>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <scale>1.73835 1.73835 1.73835</scale>
+              <uri>model://silladesk/meshes/silladesk.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://silladesk/materials/textures</uri>
+              <uri>model://silladesk/materials/scripts</uri>
+              <name>SilladeskTexture</name>
+            </script>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <emissive>0 0 0 1</emissive>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    <model name='silla_clone_0'>
+      <pose frame=''>8.61748 1.65019 0.438746 0 -0 0</pose>
+      <static>1</static>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <scale>1.28836 1.28836 1.28836</scale>
+              <uri>model://silla/meshes/silla.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://silla/materials/textures</uri>
+              <uri>model://silla/materials/scripts</uri>
+              <name>SillaTexture</name>
+            </script>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <emissive>0 0 0 1</emissive>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    <model name='silla_clone_1'>
+      <pose frame=''>-5.69678 3.35947 0.438746 0 -0 0</pose>
+      <static>1</static>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <scale>1.28836 1.28836 1.28836</scale>
+              <uri>model://silla/meshes/silla.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://silla/materials/textures</uri>
+              <uri>model://silla/materials/scripts</uri>
+              <name>SillaTexture</name>
+            </script>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <emissive>0 0 0 1</emissive>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    <model name='silla_clone_2'>
+      <pose frame=''>-4.29966 -2.63768 0.438746 0 -0 0</pose>
+      <static>1</static>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <scale>1.28836 1.28836 1.28836</scale>
+              <uri>model://silla/meshes/silla.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://silla/materials/textures</uri>
+              <uri>model://silla/materials/scripts</uri>
+              <name>SillaTexture</name>
+            </script>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <emissive>0 0 0 1</emissive>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    
+    <model name='cafe_table'>
+      <static>1</static>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://cafe_table/meshes/cafe_table.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>0.281075 -4.17739 0 0 -0 0</pose>
+    </model>
+    <model name='cafe_table_0'>
+      <static>1</static>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://cafe_table/meshes/cafe_table.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>-1.38018 4.0717 0 0 -0 0</pose>
+    </model>
+    <model name='Construction Cone'>
+      <static>1</static>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <scale>10 10 10</scale>
+              <uri>model://construction_cone/meshes/construction_cone.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <inertial>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+          <mass>1</mass>
+        </inertial>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>9.51423 -4.45054 0 0 -0 0</pose>
+    </model>
+    <model name='cafe_table_0_clone'>
+      <static>1</static>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://cafe_table/meshes/cafe_table.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>-9.11571 -4.29144 0 0 -0 0</pose>
+    </model>
+
+    <actor name="actor">
+      <skin>
+        <filename>walk.dae</filename>
+      </skin>
+      <animation name="walking">
+        <filename>walk.dae</filename>
+        <interpolate_x>true</interpolate_x>
+      </animation>
+      <script>
+      	<loop>true</loop>
+        <trajectory id="0" type="walking">
+    <waypoint>
+            <time>0</time> <!-- Traj 0 -->
+            <pose>-8.5 3.5 0 0 0 -1.5708</pose>
+    </waypoint>
+    <waypoint>
+            <time>2</time> <!-- Traj 1 -->
+            <pose>-8.5 1.5 0 0 0 -1.5708</pose>
+    </waypoint>
+    <waypoint>
+            <time>6</time> <!-- Traj 2 -->
+            <pose>-8.5 -2 0 0 0 -1.5708</pose>
+    </waypoint>
+          <waypoint>
+            <time>7.62</time> <!-- Traj 3 -->
+            <pose>-8 -3 0 0 0 -1.0472</pose>
+    </waypoint>
+	  <waypoint>
+            <time>9.24</time> <!-- Traj 4 -->
+            <pose>-7 -3.5 0 0 0 -0.5236</pose>
+    </waypoint>
+	  <waypoint>
+            <time>10.74</time> <!-- Traj 5 -->
+            <pose>-6 -3.5 0 0 0 0</pose>
+    </waypoint>
+	  <waypoint>
+            <time>11.24</time> <!-- Traj 5 -->
+            <pose>-6 -3.5 0 0 0 0.5236</pose>
+    </waypoint>
+	  <waypoint>
+            <time>12.35</time> <!-- Traj 6 -->
+            <pose>-5 -3 0 0 0 0.5236</pose>
+    </waypoint>
+	  <waypoint>
+            <time>12.85</time> <!-- Traj 6 -->
+            <pose>-5 -3 0 0 0 0</pose>
+    </waypoint>
+	  <waypoint>
+            <time>15.85</time>  <!-- Traj 7 -->
+            <pose>-2 -3 0 0 0 0</pose>
+    </waypoint>
+    <waypoint>
+            <time>16.35</time>  <!-- Traj 7 -->
+            <pose>-2 -3 0 0 0 0.5236</pose>
+    </waypoint>
+    <waypoint>
+            <time>17.47</time>  <!-- Traj 8 -->
+            <pose>-1 -2.5 0 0 0 0.5236</pose>
+    </waypoint>
+    <waypoint>
+            <time>17.97</time>  <!-- Traj 8 -->
+            <pose>-1 -2.5 0 0 0 1.0472</pose>
+    </waypoint>
+    <waypoint>
+            <time>19.09</time>  <!-- Traj 9 -->
+            <pose>-0.5 -1.5 0 0 0 1.0472</pose>
+    </waypoint>
+    <waypoint>
+            <time>19.59</time>  <!-- Traj 9 -->
+            <pose>-0.5 -1.5 0 0 0 1.5708</pose>
+    </waypoint>
+    <waypoint>
+            <time>23.09</time>  <!-- Traj 10 -->
+            <pose>-0.5 2 0 0 0 1.5708</pose>
+    </waypoint>
+    <waypoint>
+            <time>23.59</time>  <!-- Traj 10 -->
+            <pose>-0.5 2 0 0 0 1.0472</pose>
+    </waypoint>
+    <waypoint>
+            <time>24.71</time>  <!-- Traj 11 -->
+            <pose>0 3 0 0 0 1.0472</pose>
+    </waypoint>
+    <waypoint>
+            <time>25.21</time>  <!-- Traj 11 -->
+            <pose>0 3 0 0 0 0.5236</pose>
+    </waypoint>
+    <waypoint>
+            <time>26.33</time>  <!-- Traj 12 -->
+            <pose>1 3.5 0 0 0 0.5236</pose>
+    </waypoint>
+    <waypoint>
+            <time>26.83</time>  <!-- Traj 12 -->
+            <pose>1 3.5 0 0 0</pose>
+    </waypoint>
+    <waypoint>
+            <time>27.83</time>  <!-- Traj 13 -->
+            <pose>2 3.5 0 0 0 0</pose>
+    </waypoint>
+    <waypoint>
+            <time>28.33</time>  <!-- Traj 13 -->
+            <pose>2 3.5 0 0 0 -0.5236</pose>
+    </waypoint>
+    <waypoint>
+            <time>29.44</time>  <!-- Traj 14 -->
+            <pose>3 3 0 0 0 -0.5236</pose>
+    </waypoint>
+    <waypoint>
+            <time>29.94</time>  <!-- Traj 14 -->
+            <pose>3 3 0 0 0 0</pose>
+    </waypoint>
+    <waypoint>
+            <time>33.94</time>  <!-- Traj 15 -->
+            <pose>7 3 0 0 0 0</pose>
+    </waypoint>
+    <waypoint>
+            <time>34.44</time>  <!-- Traj 15 -->
+            <pose>7 3 0 0 0 -0.5236</pose>
+    </waypoint>
+    <waypoint>
+            <time>35.56</time>  <!-- Traj 16 -->
+            <pose>8 2.5 0 0 0 -0.5236</pose>
+    </waypoint>
+    <waypoint>
+            <time>36.06</time>  <!-- Traj 16 -->
+            <pose>8 2.5 0 0 0 -1.0472</pose>
+    </waypoint>
+    <waypoint>
+            <time>37.18</time>  <!-- Traj 17 -->
+            <pose>8.5 1.5 0 0 0 -1.0472</pose>
+    </waypoint>
+    <waypoint>
+            <time>37.68</time>  <!-- Traj 17 -->
+            <pose>8.5 1.5 0 0 0 -2.0944</pose>
+    </waypoint>
+    <waypoint>
+            <time>38.8</time>  <!-- Traj 18 -->
+            <pose>8 0.5 0 0 0 -2.0944</pose>
+    </waypoint>
+    <waypoint>
+            <time>39.3</time>  <!-- Traj 18 -->
+            <pose>8 0.5 0 0 0 -1.5708</pose>
+    </waypoint>
+    <waypoint>
+            <time>42.3</time>  <!-- Traj 19 -->
+            <pose>8 -2.5 0 0 0 -1.5708</pose>
+    </waypoint>
+    <waypoint>
+            <time>42.8</time>  <!-- Traj 19 -->
+            <pose>8 -2.5 0 0 0 -1.0472</pose>
+    </waypoint>
+    <waypoint>
+            <time>44.38</time>  <!-- Traj 20 -->
+            <pose>8.5 -4 0 0 0 -1.0472</pose>
+    </waypoint>
+        </trajectory>
+      </script>
+    </actor>
+
+  </world>
+</sdf>

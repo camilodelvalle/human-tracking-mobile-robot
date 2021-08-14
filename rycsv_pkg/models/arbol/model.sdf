@@ -1,0 +1,34 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+
+  <!-- Model -->
+  <model name="arbol">
+    <pose>0 0 0 0 0 0</pose>
+    <static>true</static>
+    
+    <!-- Link -->
+    <link name="link">
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://arbol/meshes/arbol.dae</uri>
+          </mesh>
+        </geometry>
+        <material> 
+          <script>
+            <uri>model://arbol/materials/textures</uri>
+            <uri>model://arbol/materials/scripts</uri>
+            <name>ArbolTexture</name>
+          </script>
+          <ambient>1 1 1 1</ambient>
+          <diffuse>1 1 1 1</diffuse>
+          <specular>1 1 1 1</specular>
+          <emissive>0 0 0 1</emissive>
+        </material>
+      </visual>
+
+    </link>
+
+  </model>
+</sdf>

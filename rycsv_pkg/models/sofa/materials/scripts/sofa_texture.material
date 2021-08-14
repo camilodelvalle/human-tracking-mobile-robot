@@ -1,0 +1,14 @@
+material SofaTexture
+{
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        // Relative to the location of the material script
+        texture ../textures/sofa_texture_map.png
+      }
+    }
+  }
+}
